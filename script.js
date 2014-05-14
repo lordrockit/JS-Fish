@@ -3,8 +3,10 @@ var ctx = c.getContext("2d");
 var x = 50;
 var y = 50;
 
-//var width = screen.width-100;
-//var height = screen.height-50;
+var width = screen.width-50;
+var height = screen.height-100;
+
+var imageObj = new Image();
 
 var aiy = 50;
 var aix = 50;
@@ -30,12 +32,26 @@ function aitick(){
   if(aix===x&&aiy===y){
     update();
   }
-  ctx.clearRect(0,0,400,200);
+  //ctx.clearRect(0,0,width,height);
+  
   ctx.fillStyle = "#00FFF2";
-  ctx.fillRect(aix,aiy,50,25);
+  ctx.fillRect(0,0,width,height);
+  
+  ctx.fillStyle="#2DFC9F";
+  ctx.fillRect(width/2+20,height-height/2,10,height/2);
+  ctx.fillRect(width/2-20,height-height/2-10,10,height/2+10);
+  ctx.fillRect(width/2-35,height-height/2+10,10,height/2+10);
+  ctx.fillRect(width/2+35,height-height/2,10,height/2);
+  
+  ctx.fillStyle = "#FF0000";
+  ctx.font = "30px Arial";
+  //ctx.fillText("im a Fish!",aix,aiy);
+  ctx.drawImage(imageObj, aix, aiy);
 }
 
-//c.width=width;
-//c.height=height;
+c.width=width;
+c.height=height;
 
-setInterval(function(){aitick();},75);
+imageObj.src = 'temp%20fish.png';
+
+setInterval(function(){aitick();},25);
