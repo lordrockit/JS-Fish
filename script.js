@@ -3,8 +3,8 @@ var ctx = c.getContext("2d");
 var x = 50;
 var y = 50;
 
-var width = screen.width;
-var height = screen.height;
+var width = screen.width-100;
+var height = screen.height-50;
 
 var aiy = 50;
 var aix = 50;
