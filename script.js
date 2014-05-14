@@ -3,8 +3,8 @@ var ctx = c.getContext("2d");
 var x = 50;
 var y = 50;
 
-var width = screen.width-100;
-var height = screen.height-50;
+//var width = screen.width-100;
+//var height = screen.height-50;
 
 var aiy = 50;
 var aix = 50;
@@ -35,7 +35,7 @@ function aitick(){
   ctx.fillRect(aix,aiy,50,25);
 }
 
-c.width=width;
-c.height=height;
+//c.width=width;
+//c.height=height;
 
 setInterval(function(){aitick();},75);
