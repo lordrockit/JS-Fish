@@ -13,8 +13,8 @@ var aix = 50;
 
 function update(){
 ctx.clearRect(0,0,400,200);
-x = Math.floor((Math.random()*width-10)+1);
-y = Math.floor((Math.random()*height-10)+1);
+x = Math.floor((Math.random()*width-50)+1);
+y = Math.floor((Math.random()*height-25)+1);
 ctx.fillStyle = "#00000";
 ctx.fillRect(x,y,10,10);
 }
@@ -26,8 +26,10 @@ function aitick(){
   }
   if(aix>x){
     aix--;
+    imageObj.src = 'https://raw.githubusercontent.com/lordrockit/JS-Fish/master/temp%20fish.png';
   }else if(aix<x){
     aix++;
+    imageObj.src = 'https://raw.githubusercontent.com/lordrockit/JS-Fish/master/temp%20fish%20fliped.png';
   }
   if(aix===x&&aiy===y){
     update();
@@ -43,15 +45,10 @@ function aitick(){
   ctx.fillRect(width/2-35,height-height/2+10,10,height/2+10);
   ctx.fillRect(width/2+35,height-height/2,10,height/2);
   
-  ctx.fillStyle = "#FF0000";
-  ctx.font = "30px Arial";
-  //ctx.fillText("im a Fish!",aix,aiy);
   ctx.drawImage(imageObj, aix, aiy);
 }
 
 c.width=width;
 c.height=height;
-
-imageObj.src = 'temp%20fish.png';
 
 setInterval(function(){aitick();},25);
