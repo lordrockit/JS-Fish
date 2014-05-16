@@ -4,7 +4,7 @@ var x = 50;
 var y = 50;
 
 var width = (screen.width-50)/1.40;
-var height = (screen.height-50)/1.40;
+var height = (screen.height-75)/1.40;
 
 var imageObj = new Image();
 
