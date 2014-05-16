@@ -3,8 +3,8 @@ var ctx = c.getContext("2d");
 var x = 50;
 var y = 50;
 
-var width = (screen.width-50)/1.25;
-var height = (screen.height-100)/1.25;
+var width = (screen.width-50)/1.35;
+var height = (screen.height-100)/1.35;
 
 var imageObj = new Image();
 
