@@ -3,8 +3,8 @@ var ctx = c.getContext("2d");
 var x = 50;
 var y = 50;
 
-var width = screen.width-50;
-var height = screen.height-100;
+var width = screen.width-50/2;
+var height = screen.height-100/2;
 
 var imageObj = new Image();
 
@@ -26,10 +26,10 @@ function aitick(){
   }
   if(aix>x){
     aix--;
-    imageObj.src = 'https://raw.githubusercontent.com/lordrockit/JS-Fish/master/temp%20fish.png';
+    imageObj.src = 'temp%20fish.png';
   }else if(aix<x){
     aix++;
-    imageObj.src = 'https://raw.githubusercontent.com/lordrockit/JS-Fish/master/temp%20fish%20fliped.png';
+    imageObj.src = 'temp%20fish%20fliped.png';
   }
   if(aix===x&&aiy===y){
     update();
